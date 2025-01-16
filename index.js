@@ -10,7 +10,9 @@ app.get('/', (req, res) => {
 
 app.get('/register', (req, res) => {
   return res.send(`
-        <html lang="en" data-bs-theme="light"><head><script src="/docs/5.3/assets/js/color-modes.js"></script>
+        <html lang="en" data-bs-theme="light">
+        <head>
+        <script src="/color-modes.js"></script>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,21 +20,17 @@ app.get('/register', (req, res) => {
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.122.0">
     <title>Signin Template · Bootstrap v5.3</title>
-
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/sign-in/">
-
     
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
 
 <link href="/bootstrap.min.css" rel="stylesheet">
 
     <!-- Favicons -->
-<link rel="apple-touch-icon" href="/docs/5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
 <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAER0lEQVR42p2XA5AESwyGv3TP4tm2bdu2bdu2bdu2bdu2zfPNTucddq6ra1T1vqr/bpxNKumk5azxFWASUXciyIrABEBNAUVR8ErPNf8e/rzo3ViV35zKw6YeHwr8IudOrBO4WF8FpqZNlXHK7pfcQ4PzL6UVLyjnjJ9cpirbA7kekPG8yjjgz0vfdXCJUZW1yKDBkX9BM0r/hj+XEnlEdW05ezznACkKvWsbQP15bniR8BiB6shpFBoPSf10OqDUU9Xc0CPSPhPAtAWqUmQcQCICNAi3ojgS9vy4yWgTCEX0/K10/e749MmY5y/q5e9vBBELWAAUIQ8FovKsdzjXwtYoZZSxZUCW8ae3LLBlg7v26+DNm2IMgmChJGmNUoxTbYfe8+q1HTx19t8D+mdIL1/VwWfP9OISAKg1hfXPGZMJZ4NEWziSwCCEFk1VTTvC7Hjm/L95+Jh/B9TBw8d2cee+/3LJ2r9y8sLf0vFrAoCJYLGdGmjbOJ6MHZMtDw3+gSNEEImw0sTSJJJBNfjjc+HRM/4kZfK5ahnv/bEnKqp5/0KIiMEQYakhYlEU1GDE8fMnMSn9Pd6YZELvv23Kltt8JJCOCCaesU7Kly/1emMlMuSFPhMuj8ORkOBo4bQtWky1YMSKB4wNQPdfCU+c24EiBZH0Z5ECJcqw1G5jDBgAwQCD5WeYaJZRmXrBOgB/fhdzySY/0f2nxSJ4csrd/4DQ+2xKehbackyK+OH9Pu4+5ld+/CjGYEciQKFTigGgotOB5+8fYv742qvrT0fKZLM32O22KTjomckZbxqLI8n0VSDMgaxBjz/zXLTOT5wwzw+cOM8vnDCgw6b7nv0m/ppzVvueDx7vBGDy2Rvsfs/4NMd2JJqWYn4TM9nQV+WBwUqNSOoDalCjifY1+PKFhIs2/JlPn+8GYNwpIhbbbhQciV9LcxLelE0xeYgIQoShjpUGhgZ2QEYaiKvx6q2dpMy8TB3FAa64DFUpJD8CMiwxGI0wMixLbeh/3KO+SY1lskbDhK/uBUo+6oJZqC1hhsVH8Qn7YwIonmzCZ9aB7AuK5ixESgtRPzNQa7HkNk0W3dyX6fuP9fhSLHAsCg1W94JVDh6bnn90ZCECGH1Cw2RzREOJl/Ljx/28eF0X0ADEdwUNHYvyQ+8RBPDMs87oVPHV6z1csuWvtPoiLBYQiuxEBWteMN91/+kowyXKv78lfP9eH2/d18U7D3ZDUsdQA7F+UFUyRJT2AEGwnDb/XyS0cKo+7bxXwdSkCNDEEiFSQzDeeEEvUEUlmwnihw8AjTBoxSYEv8KLQUbCLwUOqsrx4/b9pMjEuSXoR1OcKlUlm90X+NDn7zn0RzluvP4LVdnF39Bs61T9H1syQdGK7Zycb2xf7Sjg67JeoEggvHdemecqm9yXtUSPNsBv1tQWVeUChZ8VqJ4RqIxESZP7SZHzktgsCvzxH4KptPrepZyqAAAAAElFTkSuQmCC" sizes="32x32" type="image/png">
 <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAER0lEQVR42p2XA5AESwyGv3TP4tm2bdu2bdu2bdu2bdu2zfPNTucddq6ra1T1vqr/bpxNKumk5azxFWASUXciyIrABEBNAUVR8ErPNf8e/rzo3ViV35zKw6YeHwr8IudOrBO4WF8FpqZNlXHK7pfcQ4PzL6UVLyjnjJ9cpirbA7kekPG8yjjgz0vfdXCJUZW1yKDBkX9BM0r/hj+XEnlEdW05ezznACkKvWsbQP15bniR8BiB6shpFBoPSf10OqDUU9Xc0CPSPhPAtAWqUmQcQCICNAi3ojgS9vy4yWgTCEX0/K10/e749MmY5y/q5e9vBBELWAAUIQ8FovKsdzjXwtYoZZSxZUCW8ae3LLBlg7v26+DNm2IMgmChJGmNUoxTbYfe8+q1HTx19t8D+mdIL1/VwWfP9OISAKg1hfXPGZMJZ4NEWziSwCCEFk1VTTvC7Hjm/L95+Jh/B9TBw8d2cee+/3LJ2r9y8sLf0vFrAoCJYLGdGmjbOJ6MHZMtDw3+gSNEEImw0sTSJJJBNfjjc+HRM/4kZfK5ahnv/bEnKqp5/0KIiMEQYakhYlEU1GDE8fMnMSn9Pd6YZELvv23Kltt8JJCOCCaesU7Kly/1emMlMuSFPhMuj8ORkOBo4bQtWky1YMSKB4wNQPdfCU+c24EiBZH0Z5ECJcqw1G5jDBgAwQCD5WeYaJZRmXrBOgB/fhdzySY/0f2nxSJ4csrd/4DQ+2xKehbackyK+OH9Pu4+5ld+/CjGYEciQKFTigGgotOB5+8fYv742qvrT0fKZLM32O22KTjomckZbxqLI8n0VSDMgaxBjz/zXLTOT5wwzw+cOM8vnDCgw6b7nv0m/ppzVvueDx7vBGDy2Rvsfs/4NMd2JJqWYn4TM9nQV+WBwUqNSOoDalCjifY1+PKFhIs2/JlPn+8GYNwpIhbbbhQciV9LcxLelE0xeYgIQoShjpUGhgZ2QEYaiKvx6q2dpMy8TB3FAa64DFUpJD8CMiwxGI0wMixLbeh/3KO+SY1lskbDhK/uBUo+6oJZqC1hhsVH8Qn7YwIonmzCZ9aB7AuK5ixESgtRPzNQa7HkNk0W3dyX6fuP9fhSLHAsCg1W94JVDh6bnn90ZCECGH1Cw2RzREOJl/Ljx/28eF0X0ADEdwUNHYvyQ+8RBPDMs87oVPHV6z1csuWvtPoiLBYQiuxEBWteMN91/+kowyXKv78lfP9eH2/d18U7D3ZDUsdQA7F+UFUyRJT2AEGwnDb/XyS0cKo+7bxXwdSkCNDEEiFSQzDeeEEvUEUlmwnihw8AjTBoxSYEv8KLQUbCLwUOqsrx4/b9pMjEuSXoR1OcKlUlm90X+NDn7zn0RzluvP4LVdnF39Bs61T9H1syQdGK7Zycb2xf7Sjg67JeoEggvHdemecqm9yXtUSPNsBv1tQWVeUChZ8VqJ4RqIxESZP7SZHzktgsCvzxH4KptPrepZyqAAAAAElFTkSuQmCC" sizes="16x16" type="image/png">
-<link rel="manifest" href="/docs/5.3/assets/img/favicons/manifest.json">
-<link rel="mask-icon" href="/docs/5.3/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#712cf9">
 <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAER0lEQVR42p2XA5AESwyGv3TP4tm2bdu2bdu2bdu2bdu2zfPNTucddq6ra1T1vqr/bpxNKumk5azxFWASUXciyIrABEBNAUVR8ErPNf8e/rzo3ViV35zKw6YeHwr8IudOrBO4WF8FpqZNlXHK7pfcQ4PzL6UVLyjnjJ9cpirbA7kekPG8yjjgz0vfdXCJUZW1yKDBkX9BM0r/hj+XEnlEdW05ezznACkKvWsbQP15bniR8BiB6shpFBoPSf10OqDUU9Xc0CPSPhPAtAWqUmQcQCICNAi3ojgS9vy4yWgTCEX0/K10/e749MmY5y/q5e9vBBELWAAUIQ8FovKsdzjXwtYoZZSxZUCW8ae3LLBlg7v26+DNm2IMgmChJGmNUoxTbYfe8+q1HTx19t8D+mdIL1/VwWfP9OISAKg1hfXPGZMJZ4NEWziSwCCEFk1VTTvC7Hjm/L95+Jh/B9TBw8d2cee+/3LJ2r9y8sLf0vFrAoCJYLGdGmjbOJ6MHZMtDw3+gSNEEImw0sTSJJJBNfjjc+HRM/4kZfK5ahnv/bEnKqp5/0KIiMEQYakhYlEU1GDE8fMnMSn9Pd6YZELvv23Kltt8JJCOCCaesU7Kly/1emMlMuSFPhMuj8ORkOBo4bQtWky1YMSKB4wNQPdfCU+c24EiBZH0Z5ECJcqw1G5jDBgAwQCD5WeYaJZRmXrBOgB/fhdzySY/0f2nxSJ4csrd/4DQ+2xKehbackyK+OH9Pu4+5ld+/CjGYEciQKFTigGgotOB5+8fYv742qvrT0fKZLM32O22KTjomckZbxqLI8n0VSDMgaxBjz/zXLTOT5wwzw+cOM8vnDCgw6b7nv0m/ppzVvueDx7vBGDy2Rvsfs/4NMd2JJqWYn4TM9nQV+WBwUqNSOoDalCjifY1+PKFhIs2/JlPn+8GYNwpIhbbbhQciV9LcxLelE0xeYgIQoShjpUGhgZ2QEYaiKvx6q2dpMy8TB3FAa64DFUpJD8CMiwxGI0wMixLbeh/3KO+SY1lskbDhK/uBUo+6oJZqC1hhsVH8Qn7YwIonmzCZ9aB7AuK5ixESgtRPzNQa7HkNk0W3dyX6fuP9fhSLHAsCg1W94JVDh6bnn90ZCECGH1Cw2RzREOJl/Ljx/28eF0X0ADEdwUNHYvyQ+8RBPDMs87oVPHV6z1csuWvtPoiLBYQiuxEBWteMN91/+kowyXKv78lfP9eH2/d18U7D3ZDUsdQA7F+UFUyRJT2AEGwnDb/XyS0cKo+7bxXwdSkCNDEEiFSQzDeeEEvUEUlmwnihw8AjTBoxSYEv8KLQUbCLwUOqsrx4/b9pMjEuSXoR1OcKlUlm90X+NDn7zn0RzluvP4LVdnF39Bs61T9H1syQdGK7Zycb2xf7Sjg67JeoEggvHdemecqm9yXtUSPNsBv1tQWVeUChZ8VqJ4RqIxESZP7SZHzktgsCvzxH4KptPrepZyqAAAAAElFTkSuQmCC">
 <meta name="theme-color" content="#712cf9">
 
@@ -170,7 +168,7 @@ app.get('/register', (req, res) => {
     
 <main class="form-signin w-100 m-auto">
   <form>
-    <img class="mb-4" src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
+    <img class="mb-4" src="/bootstrap-logo.svg" alt="" width="72" height="57">
     <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
 
     <div class="form-floating">
@@ -192,7 +190,7 @@ app.get('/register', (req, res) => {
     <p class="mt-5 mb-3 text-body-secondary">© 2017–2024</p>
   </form>
 </main>
-<script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
     
 
