@@ -5,7 +5,7 @@
     "type": "module",
     "main": "index.js",
     "scripts": {
-        "dev": "node --watch .",
+        "dev": "node --watch . port=4000 lang=lt",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "keywords": [],
