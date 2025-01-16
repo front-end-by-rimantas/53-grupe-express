@@ -1,26 +1,6 @@
 import express from 'express';
+import { PORT, PROJECT_LANG } from './env.js';
 
-// issitraukti parametrus is npm script'o
-
-// envirement variables
-const env = {};
-
-for (const param of process.argv.slice(2)) {
-  const parts = param.split('=');
-  if (parts.length === 2) {
-    const name = parts[0];
-    const value = parts[1];
-
-    env[name] = value;
-  }
-}
-
-console.log(env);
-console.log(env.port);
-console.log(env.lang);
-
-
-// serverio kodas
 const app = express();
 
 app.use(express.static('public'));
@@ -31,7 +11,7 @@ app.get('/', (req, res) => {
 
 app.get('/register', (req, res) => {
   return res.send(`
-        <html lang="${env.lang}" data-bs-theme="light">
+        <html lang="${PROJECT_LANG}" data-bs-theme="light">
         <head>
         <script src="/color-modes.js"></script>
 
@@ -218,6 +198,6 @@ app.get('/register', (req, res) => {
 </body></html>`);
 });
 
-app.listen(env.port, () => {
-  console.log(`Projektas veikia: http://localhost:${env.port}`);
+app.listen(PORT, () => {
+  console.log(`Projektas veikia: http://localhost:${PORT}`);
 });
