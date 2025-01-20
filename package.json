@@ -8,7 +8,15 @@
         "dev": "node --watch . env=.env.development",
         "prod": "node . env=.env",
         "test": "node . env=.env.test",
-        "dev:me": "node . env=.env.local"
+        "dev:me": "node . env=.env.local",
+        "client": "node .",
+        "boss1": "node . env=.env.local env=.env.test",
+        "boss2": "node . env=.env.test env=.env.local",
+        "boss3": "node . env=kebakas",
+        "boss4": "node . env=.kebakas",
+        "boss5": "node . env=.env.kebakas",
+        "boss6": "node . env=kebakas.txt",
+        "empty": "node . env=.env.empty"
     },
     "keywords": [],
     "author": "Rimantas (https://github.com/belauzas)",
