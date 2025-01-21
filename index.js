@@ -3,6 +3,8 @@ import { PORT, PROJECT_LANG } from './env.js';
 
 const app = express();
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
 app.get('/', (req, res) => {
@@ -173,12 +175,12 @@ app.get('/register', (req, res) => {
     <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
 
     <div class="form-floating">
-      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-      <label for="floatingInput">Email address</label>
+      <input type="email" class="form-control" id="email" placeholder="name@example.com">
+      <label for="email">Email address</label>
     </div>
     <div class="form-floating">
-      <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-      <label for="floatingPassword">Password</label>
+      <input type="password" class="form-control" id="password" placeholder="Password">
+      <label for="password">Password</label>
     </div>
 
     <div class="form-check text-start my-3">
@@ -191,11 +193,34 @@ app.get('/register', (req, res) => {
     <p class="mt-5 mb-3 text-body-secondary">© 2017–2024</p>
   </form>
 </main>
-<script src="/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="/bootstrap.bundle.min.js"></script>
 
-    
+<script src="/client.js"></script>
 
 </body></html>`);
+});
+
+app.post('/api/register', (req, res) => {
+  const { email, password } = req.body;
+
+  if (!email) {
+    return res.json({
+      status: 'error',
+      msg: 'Nera emailo',
+    });
+  }
+
+  if (!password) {
+    return res.json({
+      status: 'error',
+      msg: 'Nera password',
+    });
+  }
+
+  return res.json({
+    status: 'success',
+    msg: 'Sekminga registracija',
+  });
 });
 
 app.listen(PORT, () => {
