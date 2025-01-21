@@ -1,5 +1,7 @@
 import express from 'express';
 import { PORT, PROJECT_LANG } from './env.js';
+import { isValidEmail } from './lib/isValidEmail.js';
+import { isValidPassword } from './lib/isValidPassword.js';
 
 const app = express();
 
@@ -203,14 +205,14 @@ app.get('/register', (req, res) => {
 app.post('/api/register', (req, res) => {
   const { email, password } = req.body;
 
-  if (!email) {
+  if (!isValidEmail(email)) {
     return res.json({
       status: 'error',
       msg: 'Nera emailo',
     });
   }
 
-  if (!password) {
+  if (!isValidPassword(password)) {
     return res.json({
       status: 'error',
       msg: 'Nera password',

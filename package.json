@@ -16,13 +16,23 @@
         "boss4": "node . env=.kebakas",
         "boss5": "node . env=.env.kebakas",
         "boss6": "node . env=kebakas.txt",
-        "empty": "node . env=.env.empty"
+        "empty": "node . env=.env.empty",
+        "unit-test": "jest --watch"
     },
     "keywords": [],
     "author": "Rimantas (https://github.com/belauzas)",
     "license": "MIT",
     "dependencies": {
+        "@babel/plugin-transform-modules-commonjs": "^7.26.3",
+        "@babel/preset-env": "^7.26.0",
+        "babel-jest": "^29.7.0",
         "dotenv": "^16.4.7",
-        "express": "^4.21.2"
+        "express": "^4.21.2",
+        "jest": "^29.7.0"
+    },
+    "jest": {
+        "transform": {
+            "^.+\\.jsx?$": "babel-jest"
+        }
     }
 }
