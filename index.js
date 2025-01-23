@@ -179,10 +179,12 @@ app.get('/register', (req, res) => {
     <div class="form-floating">
       <input type="email" class="form-control" id="email" placeholder="name@example.com">
       <label for="email">Email address</label>
+      <p>Pvz.: vardenis@email.lt</p>
     </div>
     <div class="form-floating">
       <input type="password" class="form-control" id="password" placeholder="Password">
       <label for="password">Password</label>
+      <p>Min 12 simbolių, max 100 simbolių</p>
     </div>
 
     <div class="form-check text-start my-3">
@@ -205,17 +207,20 @@ app.get('/register', (req, res) => {
 app.post('/api/register', (req, res) => {
   const { email, password } = req.body;
 
-  if (!isValidEmail(email)) {
+  const errEmail = isValidEmail(email);
+  const errPassword = isValidPassword(password);
+
+  if (errEmail) {
     return res.json({
       status: 'error',
-      msg: 'Nera emailo',
+      msg: errEmail,
     });
   }
 
-  if (!isValidPassword(password)) {
+  if (errPassword) {
     return res.json({
       status: 'error',
-      msg: 'Nera password',
+      msg: errPassword,
     });
   }
 
