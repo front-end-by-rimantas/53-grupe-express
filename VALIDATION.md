@@ -1,0 +1,26 @@
+# "Žmogiškieji" duomenų tipai
+
+-   ✅ slaptažodis
+-   ✅ el paštas
+-   amžius (metai)
+-   vardas
+-   pavardė
+-   vardas ir pavardė
+-   slapyvardis
+-   pinigai
+-   mobilus telefono numeris
+-   banko sąskaitos numeris
+-   mokėjimams kortėlės nr
+-   mokėjimams kortėlės galiojimas, pvz.: m/y
+-   IP adresas, pvz.: 123.123.123.123 (IPv4), ...???
+-   data (metai, mėn, diena), pvz.: y-m-d, d/m/y, m/d/y
+-   laikas (val, min), pvz.: 23:59, 11:59 am
+-   asmens kodas
+-   nuotrauka, pvz.: dydis mb, px min max, failo formatas
+-   bet koks kitas failas, pvz.: dydis mb, failo formatas
+-   automobilio numeris, pvz.: aaa 123, ...??
+-   automobilio VIN numeris
+-   namo numeris, pvz.: 45, 45c
+-   web nuoroda
+-   BAR kodas
+-   ISBN knygos kodas (kažkas panašaus į bar kodą)
