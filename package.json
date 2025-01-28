@@ -17,7 +17,8 @@
         "boss5": "node . env=.env.kebakas",
         "boss6": "node . env=kebakas.txt",
         "empty": "node . env=.env.empty",
-        "unit-test": "jest --watchAll"
+        "unit-test-all": "jest --watchAll",
+        "unit-test": "jest --watch"
     },
     "keywords": [],
     "author": "Rimantas (https://github.com/belauzas)",
