@@ -2,7 +2,8 @@
 
 -   ✅ slaptažodis
 -   ✅ el paštas
--   amžius (metai)
+-   ✅ amžius (metai)
+-   asmens kodas
 -   vardas
 -   pavardė
 -   vardas ir pavardė
@@ -15,7 +16,6 @@
 -   IP adresas, pvz.: 123.123.123.123 (IPv4), ...???
 -   data (metai, mėn, diena), pvz.: y-m-d, d/m/y, m/d/y
 -   laikas (val, min), pvz.: 23:59, 11:59 am
--   asmens kodas
 -   nuotrauka, pvz.: dydis mb, px min max, failo formatas
 -   bet koks kitas failas, pvz.: dydis mb, failo formatas
 -   automobilio numeris, pvz.: aaa 123, ...??
