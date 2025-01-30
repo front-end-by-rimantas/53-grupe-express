@@ -3,15 +3,16 @@
 -   ✅ slaptažodis
 -   ✅ el paštas
 -   ✅ amžius (metai)
--   asmens kodas
+-   🟨 asmens kodas
 -   vardas
 -   pavardė
 -   vardas ir pavardė
 -   slapyvardis
 -   pinigai
--   mobilus telefono numeris
--   banko sąskaitos numeris
--   mokėjimams kortėlės nr
+-   mobilus telefono numeris // 8612345678, +370612345678, +370 6 12-345678, +370 (612) 345678
+-   mobilus telefono numeris // +370: 612345678, 6 12-345678, (612) 345678
+-   banko sąskaitos numeris // LT584562548596255565, LT58 4562 5485 9625 5565, lt58 4562 5485 9625 5565
+-   mokėjimams kortėlės nr // 4562548596255565, 4562 5485 9625 5565
 -   mokėjimams kortėlės galiojimas, pvz.: m/y
 -   IP adresas, pvz.: 123.123.123.123 (IPv4), ...???
 -   data (metai, mėn, diena), pvz.: y-m-d, d/m/y, m/d/y
