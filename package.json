@@ -5,6 +5,7 @@
     "type": "module",
     "main": "index.js",
     "scripts": {
+        "html": "dead-server",
         "dev": "node --watch . env=.env.development",
         "prod": "node . env=.env",
         "test": "node . env=.env.test",
@@ -18,7 +19,8 @@
         "boss6": "node . env=kebakas.txt",
         "empty": "node . env=.env.empty",
         "unit-test-all": "jest --watchAll",
-        "unit-test": "jest --watch"
+        "unit-test": "jest --watch",
+        "coverage": "jest --coverage"
     },
     "keywords": [],
     "author": "Rimantas (https://github.com/belauzas)",
@@ -27,6 +29,7 @@
         "@babel/plugin-transform-modules-commonjs": "^7.26.3",
         "@babel/preset-env": "^7.26.0",
         "babel-jest": "^29.7.0",
+        "dead-server": "^1.0.9",
         "dotenv": "^16.4.7",
         "express": "^4.21.2",
         "jest": "^29.7.0"

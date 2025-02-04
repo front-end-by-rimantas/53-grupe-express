@@ -22,13 +22,6 @@ export function register(obj) {
 
     const { email, password } = obj;
 
-    if (email === undefined || password === undefined) {
-        return {
-            status: 'error',
-            msg: 'Truksta duomenu, turi buti email ir password',
-        };
-    }
-
     const emailMsg = isValidEmail(email);
     if (emailMsg !== '') {
         return {

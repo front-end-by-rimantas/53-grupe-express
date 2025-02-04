@@ -90,7 +90,7 @@ describe('Tinkamo tipo, bet neteisingos reiksmes', () => {
     test('Tuscias objektas', () => {
         expect(register({})).toStrictEqual({
             status: 'error',
-            msg: 'Truksta duomenu, turi buti email ir password',
+            msg: 'Netinkama struktura, turi buti email ir password',
         });
     });
 
@@ -108,14 +108,14 @@ describe('Tinkamo tipo, bet neteisingos reiksmes', () => {
     test('Truksta email', () => {
         expect(register({ password: 'e5rg8s45f65as84g' })).toStrictEqual({
             status: 'error',
-            msg: 'Truksta duomenu, turi buti email ir password',
+            msg: 'Netinkama struktura, turi buti email ir password',
         });
     });
 
     test('Truksta password', () => {
         expect(register({ email: 'petras@petras.lt' })).toStrictEqual({
             status: 'error',
-            msg: 'Truksta duomenu, turi buti email ir password',
+            msg: 'Netinkama struktura, turi buti email ir password',
         });
     });
 
